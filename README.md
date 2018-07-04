@@ -7,4 +7,5 @@
 
 * All the models presently take into account company-alone
   factors and do not consider any co-relations.
-  
+
+* To run the program command :  python predict.py ./Datasets/filename
