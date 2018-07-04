@@ -21,17 +21,17 @@ import svr
 
 
 if len(sys.argv) ==1 :
-    print('Please enter the csv file name')
+    print('Please enter the csv file path name')
     exit()
 elif os.path.exists(sys.argv[1]):
     print('predicting stock prices for',sys.argv[1])
 else:
-    print("Enter existing filename")      
+    print("Enter existing filepath")      
     exit()
     
 filename =sys.argv[1]
 
-#filename = "GOOG.csv"
+#filename = ./Datasets/GOOG.csv (example)
 print("For Linear Regression Model :")
 
 linear.plot_result(filename)
@@ -41,4 +41,4 @@ print("\n***********************************\n")
 print("For SVR Model :\n")
 svr.plot_result(filename)
 
-#linear.plot_result("GOOG.csv")
+
