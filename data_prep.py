@@ -8,19 +8,26 @@ Created on Wed Jun 27 01:02:07 2018
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-'''
-This functions reads file in csv format and index is set according to dates
-'''
+
 def get_data(filename):
+    
+    '''
+    This functions reads file in csv format and index is 
+    set according to dates.
+    '''
+    
     df = pd.read_csv(filename,parse_dates=['Date'])
     df = df.dropna()
     df.set_index('Date',inplace=True)
     return df
-''' 
-splitting into test ,training and cross validation datasets
-in ratio of 8:1:1
-'''
+
+
+
 def data_set(dataframe):
+    ''' 
+    splitting into test ,training and cross validation datasets
+    in ratio of 8:1:1
+    '''
     length = len(dataframe.iloc[:,0])
     train_end = round(length * 0.80)
     test_end = round(length * 0.90)
