@@ -12,7 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 def get_data(filename):
     
     '''
-    This functions reads file in csv format and index is 
+    This function reads file in csv format and index is 
     set according to dates.
     '''
     
