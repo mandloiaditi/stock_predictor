@@ -31,7 +31,7 @@ def plot_result(filename) :
     ''' SVR with different kernels '''
     svr_lin = SVR(kernel= 'linear', C= 1e3) 
     svr_poly = SVR(kernel= 'poly', C= 1e3, degree = 2)
-    svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1) 
+    svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.01) 
     
     '''fitting model on training set '''
     svr_rbf.fit(X_train.values, y_train.loc[:,'1DayW'].values) 
